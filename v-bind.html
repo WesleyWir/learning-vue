@@ -11,6 +11,13 @@
         <h2>Acessse o site:</h2>
         <a v-bind:href="url">Site</a>
         <a :href="url">Site</a>
+
+        <p :[arg]="value">Lorem ipsum dolor sit amet, consectetur 
+            adipisicing elit. 
+            Distinctio magnam consectetur libero iure vero 
+            quasi dicta quisquam sunt obcaecati? Ducimus veniam, 
+            laudantium quasi sint veritatis voluptatum necessitatibus 
+            nobis quaerat voluptates?</p>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6"></script>
@@ -20,7 +27,9 @@
         let app = new Vue({
            el: '#directives',
            data: {
-               url: "https://google.com"
+               url: "https://google.com",
+               arg: 'title',
+               value: 'Paragráfo de exemplo'
            }
         })
     </script>
