@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="pt-BR">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diretivas: v-bind</title>
+</head>
+<body>
+
+    <div id="directives">
+        <h2>Acessse o site:</h2>
+        <a v-bind:href="url">Site</a>
+        <a :href="url">Site</a>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>
+
+    <script>
+        let app = new Vue({
+           el: '#directives',
+           data: {
+               url: "https://google.com"
+           }
+        })
+    </script>
+</body>
+</html>
