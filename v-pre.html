@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="pt-BR">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diretivas: v-pre</title>
+</head>
+<body>
+
+    <div id="directives">      
+        <h2>{{message}}</h2> 
+        <h2 v-pre>{{message}}</h2>
+
+        <p @click="alert('Hello World')">clique aqui</p>
+        <p @click="alert('Hello World')" v-pre>clique aqui desativado pelo v-pre</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>
+
+    <script>
+        let app = new Vue({
+           el: '#directives',
+           data: {
+                message: 'Wesley'
+           },
+        })
+    </script>
+</body>
+</html>
