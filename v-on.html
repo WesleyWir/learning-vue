@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="pt-BR">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diretivas: v-on</title>
+</head>
+<body>
+
+    <div id="directives">       
+        <p v-on:click="reverseMessage()">{{ message }}</p>
+        <p @click="reverseMessage()">{{ message }}</p>
+
+        <h4 v-on:[eventName]="reverseMessage()">{{ message }}</h4>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>
+
+    <script>
+        let app = new Vue({
+           el: '#directives',
+           data: {
+                message: 'Vue.js',
+                eventName: 'click'
+           },
+           methods: {
+               reverseMessage(){
+                   this.message = this.message.split('').reverse().join('');
+               }
+           }
+        })
+    </script>
+</body>
+</html>
