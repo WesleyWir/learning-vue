@@ -15,7 +15,7 @@
         <h2 v-capitalize>hello world {{name}}</h2>
         <!-- <h2 v-custom:parametro.mod1.mod2="'Informação'">{{name}}</h2> -->
 
-        <h2 v-custom:[argument]="distance">{{name}}</h2>
+        <h2 v-custom="{ distance: argument, distance}">{{name}}</h2>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>
@@ -30,7 +30,7 @@
         function setDirection(el, binding){
             el.style.margin = 0;
 
-            let direction = binding.arg.toLowerCase();
+            let direction = binding.value.direction.toLowerCase();
             let value = binding.value;
 
             switch(direction){
