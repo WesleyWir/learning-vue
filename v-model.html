@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="pt-BR">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diretivas: v-model</title>
+</head>
+<body>
+
+    <div id="directives">       
+        <h3 v-bind:style="{ fontSize: textSize + 'px'}">Wesley</h3>
+
+        <input type="text" placeholder="Digite o tamanho da fonte" v-model.lazy="textSize">
+
+        <h4 v-bind:style="{ color: textColor}">Wesley</h4>
+
+        <input type="text" placeholder="Cor do Texto" v-model="textColor">
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>
+
+    <script>
+        let app = new Vue({
+           el: '#directives',
+           data: {
+                textSize: 30,
+                textColor: 'red'
+           }
+        })
+    </script>
+</body>
+</html>
