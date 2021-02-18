@@ -10,35 +10,13 @@
     </head>
     <body>
         
-        <div id="hcode-blog">
-        
-            <header>
-            
-                <div class="container">
-
-                    <nav class="navbar">
-
-                        <a href="#" class="text-center logo">
-                            <img src="./assets/img/logo.svg" alt="Hcode Treinamentos">
-                            Blog
-                        </a>
-
-                        <a href="#" class="login bg-primary text-white">Fazer login</a>
-
-                    </nav>
-
-                </div>
-
-            </header>
+        <div id="#app">
+            <header-component></header-component>
 
             <section class="posts">
-
                 <div class="container">
-
                     <div class="row post-item">
-
                         <div class="col-11">
-
                             <img src="./assets/img/post1.webp" alt="Post 1">
                             <h2>MySQL no Google Cloud SQL</h2>
                             <p>
@@ -46,9 +24,7 @@
                                 Obviamente você precisa de uma conta no Google e um cartão de crédito para ativar o faturamento. Se for a primeira vez o Google irá te dar $300 para experimentar qualquer serviço, assim você pode aprender, conhecer e até avaliar os preços cobrados.
                                 Todos os serviços que você configura no GCloud ficam agrupados por projetos, então a primeira coisa a se fazer é criar ou selecionar um projeto.
                             </p>
-
                         </div>
-
                     </div>
 
                     <div class="row post-item">
@@ -62,15 +38,11 @@
 
                                 Obs. ao Leitor: Por vezes caro leitor, você verá em nossos posts a sigla TL;DR quando ela estiver presente prepare-se, vêm texto longo por aí, assim o resumo do post será colocado no Parágrafo TL;DR algo como Too Long Didn't Read ou Texto Longo, Não Li.
                             </p>
-
                         </div>
-
                     </div>
 
                     <div class="row post-item">
-
                         <div class="col-11">
-
                             <img src="./assets/img/post3.webp" alt="Post 3">
                             <h2>Instalando e Configurando o PHP 7 e o Apache no Windows com Xampp</h2>
                             <p>
@@ -78,20 +50,41 @@
 
                                 Existe uma diferença entre Linguagem de Programação e Servidor Web, neste vídeo abordamos a diferença entre essas tecnologias e o que é um instalador como o XAMPP.
                             </p>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </section>
 
             <footer>
                 <p class="text-center">Visite: <a href="https://youtube.com/hcodebrasi">Hcode Treinamentos</a></p>
             </footer>
-
         </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6"></script>
+
+        <script>
+            Vue.component('header-component', {
+                template: `
+                <header>
+                    <div class="container">
+                        <nav class="navbar">
+                            <a href="#" class="text-center logo">
+                                <img src="./assets/img/logo.svg" alt="Hcode Treinamentos">
+                                Blog
+                            </a>
+                            <a href="#" class="login bg-primary text-white">Fazer login</a>
+                        </nav>
+                    </div>
+                </header>
+                `
+            })
+            let app = new Vue({
+                el: '#app',
+                data:{
+
+                }
+            })
+        </script>
 
     </body>
 </html>
