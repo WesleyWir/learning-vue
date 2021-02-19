@@ -10,8 +10,19 @@
     </head>
     <body>
         
-        <div id="#app">
-            <header-component></header-component>
+        <div id="app">
+            <header>
+                <div class="container">
+                    <nav class="navbar">
+                        <a href="#" class="text-center logo">
+                            <img src="./assets/img/logo.svg" alt="Hcode Treinamentos">
+                            Blog
+                        </a>
+                        <p v-show="isLogged" class="text-black text-center">Seja bem-vindo</p>
+                        <a href="#" class="login bg-primary text-white" @click="loginLogout('ok')">Fazer login</a>
+                    </nav>
+                </div>
+            </header>
 
             <section class="posts">
                 <div class="container">
@@ -63,25 +74,15 @@
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6"></script>
 
         <script>
-            Vue.component('header-component', {
-                template: `
-                <header>
-                    <div class="container">
-                        <nav class="navbar">
-                            <a href="#" class="text-center logo">
-                                <img src="./assets/img/logo.svg" alt="Hcode Treinamentos">
-                                Blog
-                            </a>
-                            <a href="#" class="login bg-primary text-white">Fazer login</a>
-                        </nav>
-                    </div>
-                </header>
-                `
-            })
             let app = new Vue({
                 el: '#app',
                 data:{
-
+                    isLogged: true
+                },
+                methods:{
+                    loginLogout: function(){
+                        this.isLogged = !this.isLogged;
+                    }
                 }
             })
         </script>
