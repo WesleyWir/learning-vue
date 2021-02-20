@@ -24,6 +24,14 @@ a, a:hover {
     padding: 5px;
     text-align: center;
 }
+.navbar p {
+    position: absolute;
+    font-weight: bold;
+    font-size: 32px;
+    right: 10px;
+    padding: 5px;
+    text-align: center;
+}
 
 .navbar .logout {
     padding: 5px;
@@ -49,13 +57,4 @@ a, a:hover {
 
 footer {
     margin-top: 30px;
-}
-p{
-    position: relative;
-    position: absolute;
-    font-weight: bold;
-    font-size: 25px;
-    right: 10px;
-    padding: 5px;
-    text-align: center;
 }
