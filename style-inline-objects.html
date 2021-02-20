@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="pt-BR">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos em linha - Objeto</title>
+</head>
+
+<body>
+
+    <div id="styles">
+
+        <input type="text" placeholder="Tamanho da Fonte" v-model="fontSizeProp">
+        <h2 :style="{ fontSize: fontSizeProp + 'px' }">Wesley</h2>
+        <hr>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6"></script>
+
+    <script>
+        let app = new Vue({
+            el: '#styles',
+            data: {
+                fontSizeProp: 20
+            },
+        })
+    </script>
+</body>
+
+</html>
