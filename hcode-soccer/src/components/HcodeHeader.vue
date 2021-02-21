@@ -7,8 +7,8 @@
                 </a>
 
                 <div class="links mr-2">
-                    <a href="#" class="btn mr-5">Início</a>
-                    <a href="#" class="btn mr-5">Times</a>
+                    <a href="#" @click.prevent="$emit('change-component', 'home')" class="btn mr-5">Início</a>
+                    <a href="#" @click.prevent="$emit('change-component', 'news')" class="btn mr-5">Notícias</a>
                     <a href="#" class="btn mr-5">Classificações</a>
                     <select name="championship" id="select-championship" class="form-control" @change="$emit('select-championship', $event.target.value)">
                         <option value="">Selecione um Campeonato</option>
