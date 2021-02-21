@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="pt-BR">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componente Local</title>
+</head>
+
+<body>
+
+    <div id="components">
+        <text-render text="Wesley"></text-render>
+        <hr>
+        <list></list>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6"></script>
+
+    <script>
+        /* Componente Global
+        Vue.component('list-component', {
+            template: `
+                <ul>
+                    <li v-for="person in names">{{ person }}</li>
+                </ul>
+            `,
+            data: () => {
+                return {
+                    names:['Wesley', 'Marcos', 'Zé']
+                }
+            }
+        })
+        */
+        let listItemComponent = {
+            props: ['name'],
+            template: '<li>{{ name }}</li>'
+        }
+        let listComponent = {
+            template: `
+                <ul>
+                    <listItem v-for="person in names" :name = "person">
+                </ul>
+            `,
+            data: () => {
+                return {
+                    names:['Wesley', 'Marcos', 'Zé']
+                }
+            },
+            components: {
+                listItem: listItemComponent,
+            }
+        }
+        let app = new Vue({
+            el: '#components',
+            data: {
+                
+            },
+            components:{
+                list: listComponent,
+            }
+        })
+    </script>
+</body>
+
+</html>
