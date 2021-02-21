@@ -1,20 +1,24 @@
 <template>
   <div id="app">
     <HcodeHeader />
+
+    <HcodeFooter />
   </div>
 </template>
 
 <script>
-import HcodeHeader from './components/HcodeHeader'
+import HcodeHeader from './components/HcodeHeader';
+import HcodeFooter from './components/HcodeFooter';
 
 export default {
   name: 'App',
   components: {
-    HcodeHeader
+    HcodeHeader,
+    HcodeFooter
   }
 }
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Rajdhani&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Rajdhani&display=swap');
 </style>
