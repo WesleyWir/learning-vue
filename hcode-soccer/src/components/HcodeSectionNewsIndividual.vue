@@ -6,7 +6,7 @@
         <div class="col-9">
             <h2>{{ newsTitle }}</h2>
             
-            <p>{{ newsContent | truncate(200) }}</p>
+            <slot>Notícia Padrão</slot>
 
             <span class="font-italic">{{ newsDate }}</span>
         </div>
@@ -25,10 +25,6 @@ export default {
             required: true,
         },
         newsTitle:{
-            type: String,
-            required: true
-        },
-        newsContent:{
             type: String,
             required: true
         },
