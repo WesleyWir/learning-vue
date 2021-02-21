@@ -6,9 +6,11 @@
                     :key = "notice.id"
                     :img-name="notice.img"
                     :img-info = "notice.imgInfo"
-                    :news-title="notice.title"
                     :news-date="notice.date"
                 >
+                    <template #title>
+                        <h2>{{ notice.title }}</h2>
+                    </template>
                         <p>{{ notice.content | truncate(200) }}</p>
                 </HcodeSectionNewsIndividual>
 
