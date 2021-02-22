@@ -15,7 +15,7 @@
                     <h2>Seu Clube é: {{ myClub }}</h2>
                 </div>
                 <div class="col-6">
-                    <HcodeInput v-model="myClub"/>
+                    <HcodeInput />
                 </div>
             </div>
         </div>
@@ -26,6 +26,7 @@
 <script>
 import HcodeSectionBanner from './HcodeSectionBanner';
 import HcodeInput from './HcodeInput';
+import { mapGetters } from 'vuex'
 
 export default{
     components:{
@@ -35,12 +36,27 @@ export default{
     },
     data() {
         return {
-            myClub: "Flamengo",
+
         }
     },
     props:{
-        championship: String,
         currentComponent: String
+    },
+    computed:{
+        ...mapGetters({
+            championship: 'getChampionship',
+            myClub: 'getClubName'
+        }),
+
+        /*
+        championship(){
+            return this.$store.getters.getChampionship
+        }
+        ...mapState(['championship']),
+        ...mapState({ 
+            myClub: 'clubName',
+        })
+        */
     }
 }
 </script>
