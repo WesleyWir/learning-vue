@@ -6,7 +6,6 @@
     />
 
     <HcodeSection 
-    :championship="championship"
     :current-component = "currentSectionComponent"/>
 
     <HcodeFooter />
