@@ -16,7 +16,7 @@ export default new VueRouter({
         path: '/news',
         component: News
     },{
-        path: '/notice',
+        path: '/news/:idnotice',
         component: Notice
     }]
 })
